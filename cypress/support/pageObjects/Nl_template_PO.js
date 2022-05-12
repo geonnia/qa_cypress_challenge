@@ -17,15 +17,15 @@ class Nl_template_PO {
         /**@type{array}*/
         let arrayHTML = [];
         return new Cypress.Promise((resolve) => {
-            cy.get(element).each(($el, index) => {
-                const attributeValue = $el.attr(attribute) 
-               if(attributeValue && attributeValue.startsWith('http')) {
+            cy.get(element).each(($el) => {
+                const attributeValue = $el.attr(attribute); 
+                if(attributeValue && attributeValue.startsWith('http')) {
                     arrayHTML.push(attributeValue);
                 }
-                    resolve(arrayHTML);
+                resolve(arrayHTML);
             });
         });
-    }
+    };
 }
 
 export default Nl_template_PO;

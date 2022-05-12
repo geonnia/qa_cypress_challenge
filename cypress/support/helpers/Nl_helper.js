@@ -18,7 +18,7 @@ class Nl_helper {
         }
 
         return result;
-    }
+    };
 
 
     /**
